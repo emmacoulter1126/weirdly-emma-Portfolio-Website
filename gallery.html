@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="my personal portfolio showcasing my projects and skills.">
+  <title>gallery page</title>
+  <link rel="icon" type="image/x-icon" href="imagery/Group 1.ico">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="gallery-page">
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html">
+      <img src="imagery/weirdlyemmaLogo.png" alt="weirdly emma logo" class="header-logo">
+    </a>
+    <nav class="header-nav">
+      <a href="profile.html"><img src="imagery/HeaderProfile.png" alt="profile button"></a>
+      <a href="gallery.html"><img src="imagery/HeaderGallery.png" alt="gallery button"></a>
+      <a href="resume.html"><img src="imagery/HeaderResume.png" alt="resume button"></a>
+      <a href="connect.html"><img src="imagery/HeaderConnect.png" alt="connect button"></a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <img src="imagery/GalleryHeading.png" alt="gallery heading" class="gallery-heading">
+
+<section>
+  <h2 class="daydream-title">graphic design</h2>
+
+<div class="carousel-row">
+    <!-- WISPR CAROUSEL -->
+    <div class="carousel wisprcarousel">
+        <button class="arrow-btn left" onclick="prevSlide('wisprcarousel')">&#10094;</button>
+        <div class="carousel-inner">
+            <div class="slide active"><img src="imagery/P1WisprBook-01.jpg"></div>
+            <div class="slide"><img src="imagery/P2WisprBook-02.jpg"></div>
+            <div class="slide"><img src="imagery/P3WisprBook-03.jpg"></div>
+            <div class="slide"><img src="imagery/P4WisprBook-04-04.jpg"></div>
+            <div class="slide"><img src="imagery/P5WisprBook-05-05.jpg"></div>
+            <div class="slide"><img src="imagery/P6WisprBook-06.jpg"></div>
+            <div class="slide"><img src="imagery/P7WisprBook-07-07.jpg"></div>
+            <div class="slide"><img src="imagery/P8WisprBook-08-08.jpg"></div>
+        </div>
+        <button class="arrow-btn right" onclick="nextSlide('wisprcarousel')">&#10095;</button>
+    </div>
+
+    <!-- ANIMAL CROSSING CAROUSEL -->
+    <div class="carousel animalcarousel">
+        <button class="arrow-btn left" onclick="prevSlide('animalcarousel')">&#10094;</button>
+        <div class="carousel-inner">
+            <div class="slide active"><img src="imagery/P1AnimalCrossingMenu.jpg"></div>
+            <div class="slide"><img src="imagery/P2AnimalCrossingMenu.jpg"></div>
+            <div class="slide"><img src="imagery/P3AnimalCrossingMenu.jpg"></div>
+            <div class="slide"><img src="imagery/P4AnimalCrossingMenu.jpg"></div>
+        </div>
+        <button class="arrow-btn right" onclick="nextSlide('animalcarousel')">&#10095;</button>
+    </div>
+</div>
+
+
+<div class="centered-carousel-wrapper">
+  <div class="carousel thirdcarousel">
+    <button class="arrow-btn left" onclick="prevSlide('thirdcarousel')">❮</button>
+
+    <div class="carousel-inner">
+       <div class="slide active"><img src="imagery/TropicalFront.jpg"></div>
+       <div class="slide"><img src="imagery/TropicalBack.jpg"></div>
+       <div class="slide"><img src="imagery/NightlifeFront.jpg"></div>
+       <div class="slide"><img src="imagery/NightlifeBack.jpg"></div>
+       <div class="slide"><img src="imagery/InfernoFront.jpg"></div>
+       <div class="slide"><img src="imagery/InfernoBack.jpg"></div>
+    </div>
+
+    <button class="arrow-btn right" onclick="nextSlide('thirdcarousel')">❯</button>
+  </div>
+</div>
+
+
+
+</div>
+
+
+  </div>
+</section>
+
+<section>
+  <h2 class="daydream-title">video editing</h2>
+  <div class="video-section-row">
+
+<div class="my-video-frame video-one">
+    <div class="vimeo-wrapper">
+      <iframe
+        src="https://player.vimeo.com/video/1140654134?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+        allow="autoplay; fullscreen; picture-in-picture; encrypted-media; web-share"
+        allowfullscreen
+        title="Bodysnatchers Fanmade Music Video"
+      ></iframe>
+    </div>
+  </div>
+
+<div class="my-video-frame video-two">
+
+  <div class="vimeo-wrapper">
+    <iframe
+      src="https://player.vimeo.com/video/1140807062?badge=0&autopause=0&player_id=0&app_id=58479"
+      allow="autoplay; fullscreen; picture-in-picture; encrypted-media; web-share"
+      allowfullscreen
+      title="Two Time Fanmade Music Video"
+    ></iframe>
+  </div>
+</div>
+
+
+</div>
+
+
+</section>
+
+<section>
+  <h2 class="daydream-title">sculpture</h2>
+  <div class="sculpture-row">
+    <img src="imagery/MothmanSculpture-01.jpg" alt="mothman sculpture" class="sculpture-img"> 
+    <img src="imagery/CthuluSculpture.jpg" alt="cthulu sculpture" class="sculpture-img">
+    <img src="imagery/PheonixSculpture-01.jpg" alt="phoenix sculpture" class="sculpture-img">
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <img src="imagery/weirdlyemmaLogo.png" alt="weirdly emma logo" class="footer-logo">
+    <div class="footer-social">
+      <a href="https://www.instagram.com/artsycurly/"><img src="imagery/InstagramPatch.png" alt=""></a>
+      <a href="https://pin.it/2kPeU6qAZ"><img src="imagery/PinterestPatch.png" alt=""></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function nextSlide(id) {
+    const carousel = document.querySelector("." + id);
+    const slides = carousel.querySelectorAll(".slide");
+    let current = [...slides].findIndex(s => s.classList.contains("active"));
+    slides[current].classList.remove("active");
+    slides[(current+1) % slides.length].classList.add("active");
+}
+
+function prevSlide(id) {
+    const carousel = document.querySelector("." + id);
+    const slides = carousel.querySelectorAll(".slide");
+    let current = [...slides].findIndex(s => s.classList.contains("active"));
+    slides[current].classList.remove("active");
+    slides[(current-1+slides.length) % slides.length].classList.add("active");
+}
+</script>
+
+
+</body>
+</html>
