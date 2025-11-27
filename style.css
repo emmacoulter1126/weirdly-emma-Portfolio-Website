@@ -239,7 +239,7 @@ img.headshot {
     width: 260px;
     height: auto;
     position: absolute;
-    left: -315px;
+    left: -300px;
     top: 45%;
     transform: translateY(-55%);
     pointer-events: none;
@@ -391,10 +391,11 @@ body.profile-page footer {
     display: block;
 }
 
+
 .rock-sticker {
     position: absolute;
-    top: -40px;   /* adjust to taste */
-    left: -90px;  /* adjust to taste */
+    top: 220px;
+    left: 45px;      /* moved left a LOT */
     width: 220px;
     pointer-events: none;
     transform: rotate(-6deg);
@@ -402,8 +403,8 @@ body.profile-page footer {
 
 .skull-sticker {
     position: absolute;
-    bottom: -40px; /* anchor to bottom instead of huge fixed top */
-    right: -80px;  /* adjust to taste */
+    bottom: -40px;
+    right: 45px;      /* moved left slightly */
     width: 220px;
     pointer-events: none;
     transform: rotate(2deg);
@@ -412,12 +413,12 @@ body.profile-page footer {
 @media (max-width: 1000px) {
     .rock-sticker {
         top: 200px;
-        left: 0px;
+        left: 200px;
         width: 130px;
     }
     .skull-sticker {
         top: 210px;
-        right: 0px;
+        right: 12px;
         width: 150px;
     }
 }
